@@ -1,0 +1,9 @@
+.examcontainer {
+	margin-top: 50px;
+	min-height: 900px;
+	border: solid;
+	border-color: #E8E8E8;
+}
+.examrow {
+	height: 1000px;
+}

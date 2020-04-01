@@ -1,0 +1,103 @@
+* {
+	font-family: Microsoft YaHei;
+}
+
+.exam-title {
+	font-size:20px;
+	padding:10px 0px 10px 0px;
+}
+
+span {
+	font-size:15px;
+}
+
+h4 {
+	line-height: 30px
+}
+
+ul,li{ padding:0;margin:0;list-style:none}
+
+.answer-box {
+	margin-top:40px; 
+}
+
+.answer-option {
+	margin-top:10px; 
+}
+
+.buttons-submit {
+	margin: 10px 0px 10px 0px;
+}
+
+.btn.btn-info {
+	margin-right:10px;
+}
+
+.btn-success {
+	float: right;
+	margin-right: 10%; 
+}
+
+.question-page {
+	border: solid 2px grey;
+	widows: 10px;
+}
+.question-page a {
+	text-decoration: none;
+	font-color: grey; 
+	font-size: 15px;
+}
+
+.exam-title {
+	font-weight: bold;
+	text-align: center;
+}
+
+.nav-pills {
+	padding-top:10px; 	
+}
+
+ul.nav-pills>li {
+	margin-right: 40px;
+}
+
+li>i {
+	margin-right: 10px;
+}
+
+.tiny-title {
+	margin-right: 5px;
+	font-weight: bold;
+}
+
+.dynamic {
+	font-weight: bold;
+	color: rgb(51,122,183);
+}
+
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+.btn-info {
+	background-color: rgb(51,122,183);
+    border-color: rgb(51,122,183);
+}
+
+.page-button-container {
+	margin-top: 20px;
+}
+
+ul.list-inline>li {
+	margin-right: 5px;
+	float: left;
+	width: 22px;
+	text-align: center;
+}
+
+.page-text {
+	color: black;
+}
+ul.list-inline {
+	display: inline-block;
+}
