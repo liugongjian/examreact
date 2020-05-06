@@ -39,6 +39,18 @@ class ExamService{
             data    : {}
         });
     }
+
+    submitExamResult(subject_id,exam_id,answer_list){
+        return _mm.request({
+            type    : 'post',
+            url     : '/manage/examResult',
+            data    : {
+                subject_id:subject_id,
+                exam_id:exam_id,
+                answer_list:answer_list
+            }
+        });
+    }
 }
 
 export default ExamService;

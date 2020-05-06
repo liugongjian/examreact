@@ -1,0 +1,20 @@
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
+.fade:not(.show) {
+    opacity: 1;
+}
+
+
+.modal-backdrop.fade {
+	opacity: 0.5;
+}
+
+.modal-dialog {
+	position:absolute;
+	bottom:50%;
+	left:50%;
+}

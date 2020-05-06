@@ -17,6 +17,8 @@ import ErrorPage        from 'page/error/index.jsx';
 
 import Exam             from 'page/exam/index.jsx';
 import Subjects         from 'page/subjects/index.jsx';
+import ExamResult       from 'page/examresult/index.jsx';
+
 import './index.css'
 
 
@@ -27,7 +29,8 @@ class App extends React.Component{
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/exam/:subject_id" component={Exam}/>
-                    <Route path="/subjects" component={Subjects}/>                      
+                    <Route path="/subjects/:subject_type" component={Subjects}/>                      
+                    <Route path="/examresult" component={ExamResult}/>                      
                     <Route component={ErrorPage}/>
                 </Switch>
             </Layout>

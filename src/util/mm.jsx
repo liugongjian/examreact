@@ -20,20 +20,21 @@ class MUtil{
                     }
                     // 没有登录状态，强制登录
                     else if(10 === res.status){
-                        this.doLogin();
+                        this.doLogin(res);
                     }
                     else{
                         typeof reject === 'function' && reject(res.msg || res.data);
                     }
                 },
                 error       : err => {
+                    
                     typeof reject === 'function' && reject(err.statusText);
                 }
             });
         });  
     }
     // 跳转登录
-    doLogin(){
+    doLogin(res){
         window.location.href = '/login?redirect=' + encodeURIComponent(window.location.pathname);
     }
     // 获取URL参数
@@ -55,14 +56,19 @@ class MUtil{
     // 本地存储
     setStorage(name, data){
         let dataType = typeof data;
+        let storage = [];
         // json对象
-        if(dataType === 'object'){
+        if (data instanceof Array) {
+            window.localStorage[name]=JSON.stringify(data);
+        }
+        else if(dataType === 'object'){
             window.localStorage.setItem(name, JSON.stringify(data));
         }
         // 基础类型
         else if(['number','string','boolean'].indexOf(dataType) >= 0){
             window.localStorage.setItem(name, data);
         }
+
         // 其他不支持的类型
         else{
             alert('该类型不能用于本地存储');

@@ -7,6 +7,7 @@
 
 import React        from 'react';
 import { Link }     from 'react-router-dom';
+import './index.css'
 
 class Home extends React.Component{
     render(){
@@ -32,49 +33,36 @@ class Home extends React.Component{
                     <hr/>
                     <p>这里有最新的AWS认证模拟题、真题以及各种备考中文资料，同学们需要请自取</p>
                     <p>仅最新的题库资料需要付费</p>
-                    <a className="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
                   </div>
                   <div className="col-md-4 mb-5">
                     <h2>公众号</h2>
                     <hr/>
-                    <img className="card-img-top" src="http://placehold.it/300x200" alt=""/>
+                    <img className="card-img-top" src="../../../img/2020123412168_wechatQR.png" alt=""/>
                   </div>
                 </div>
 
                <div className="row">
-                  <div className="col-md-4 mb-5">
+                  <div className="col-md-6 mb-4">
                     <div className="card h-100">
-                      <img className="card-img-top" src="http://placehold.it/300x200" alt=""/>
+                      <img className="card-img-top homepic" src="../../../img/business-check-list.jpg" alt=""/>
                       <div className="card-body">
-                        <h4 className="card-title">Card title</h4>
-                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+                        <h4 className="card-title">备考题库</h4>
+                        <p className="card-text">在备考过程中，真题是最好的水平检测工具，我们一直在<b>收集</b>、<b>更新</b>最好的题目给小伙伴们.</p>
                       </div>
                       <div className="card-footer">
-                        <a href="#" className="btn btn-primary">Find Out More!</a>
+                        <Link className="btn btn-primary" to="/subjects/charge">去看看</Link>
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-4 mb-5">
+                  <div className="col-md-6 mb-4">
                     <div className="card h-100">
-                      <img className="card-img-top" src="http://placehold.it/300x200" alt=""/>
+                      <img className="card-img-top homepic" src="../../../img/Untitled-design-12-1.jpg" alt=""/>
                       <div className="card-body">
-                        <h4 className="card-title">Card title</h4>
-                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+                        <h4 className="card-title">文档资料</h4>
+                        <p className="card-text">知其然，更知其所以然，我们不断更新最新的<b>AWS文档</b>供小伙伴们学习，如有疑问可通过微信公众号与我们联络</p>
                       </div>
                       <div className="card-footer">
-                        <a href="#" className="btn btn-primary">Find Out More!</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-4 mb-5">
-                    <div className="card h-100">
-                      <img className="card-img-top" src="http://placehold.it/300x200" alt=""/>
-                      <div className="card-body">
-                        <h4 className="card-title">Card title</h4>
-                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-                      </div>
-                      <div className="card-footer">
-                        <a href="#" className="btn btn-primary">Find Out More!</a>
+                        <Link className="btn btn-primary" to="#">去看看</Link>
                       </div>
                     </div>
                   </div>

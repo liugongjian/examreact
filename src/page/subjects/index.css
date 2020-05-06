@@ -5,3 +5,42 @@
 	padding-top: 50px;
 	min-height:800px;
 }
+
+.subscript{
+	color: #fff;
+	height: 30px;
+	width: 70px;
+	position: absolute;
+	right: 0px;
+	text-align: center;
+	line-height: 30px;
+	font-family: "黑体";
+
+/*	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);*/
+}
+
+.subbought {
+	background-color: #0c60ee;
+}
+.subnotbought {
+	background-color: grey;
+}
+.btn-try {
+	margin-right: 5px;
+	position: absolute;
+	right:  65px;
+	bottom: 3px;
+}
+.btn-buy {
+	position: absolute;
+	right: 3px;
+	bottom: 3px;
+}
+
+.img-subject {
+	height: 300px;
+}

@@ -17,8 +17,27 @@ class Question extends React.Component{
 
     }
 
-    render(){
+    choose(e){
+        this.setState({
+            choosed_option:e.target.value
+        })
+    }
 
+    nextQuestion() {
+         // this.props.onSaveOneQuestion(this.props.question.subject_id, this.props.question.exam_id,this.props.currentQuestionNo+1);
+         //console.log('nextQuestion--->this:',this);
+         const {currentQuestionNo,question,onSaveOneQuestion}= this.props;
+         //const {currentQuestionNo,question} = state;
+         onSaveOneQuestion(question.subject_id,question.exam_id,currentQuestionNo,this.state.choosed_option);
+        // const {parent} = this.props;
+        // parent.setState({
+
+        // })
+
+    }
+
+    render(){
+        let options = ['A','B','C','D','E','F','G','H','I','J','K','L'];
         const indexs = [];
         for(let i = 1; i <= this.props.question.question_totalcount ; i++){
             /*indexs.push(<li className="question-page" key={i}><Link to={`/exam/${this.props.subject_id}/${this.props.exam_id}/${i}`} className="page-text">{i}</Link></li>);
@@ -44,7 +63,7 @@ class Question extends React.Component{
                                 this.props.question.question_options.length ? this.props.question.question_options.map(
                                     (option, index) => (
                                         <li className="answer-option" key={index}>
-                                            <input type="radio"></input>
+                                            <input type="radio" value={options[index]} onChange={(e)=>this.choose(e)}></input>
                                             <span>{option.option_desc}</span>
                                         </li>)
                                 ) : (<li><span>错误</span></li>)
@@ -53,10 +72,11 @@ class Question extends React.Component{
             	</div>
 
                 <div className="buttons-submit">
-                    <button type="submit" className="btn btn-info" /*onClick={(e) => this.loadSingleQuestion(this.props.subject_id, this.props.exam_id,this.props.question_no+1)}*/>下一题</button>
-                    <button type="submit" className="btn btn-info">跳过</button>
-
-                    <button type="submit" className="btn btn-success">结束考试</button>
+                    <button type="submit" className="btn btn-info" 
+                            onClick={() =>this.nextQuestion()}>下一题
+                    </button>
+                    <button type="submit" className="btn btn-info" onClick={() => this.props.onloadSingleQuestion(this.props.question.subject_id, this.props.question.exam_id,this.props.currentQuestionNo+1)}>跳过</button>
+                    <button type="submit" className="btn btn-success" onClick={() => this.props.onSubmitExamResult()}>结束考试</button>
                 </div>
 
                 <div className="page-button-container">
