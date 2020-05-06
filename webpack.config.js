@@ -16,7 +16,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: WEBPACK_ENV === 'dev' 
-            ? '/dist/' : '//s.jianliwu.com/admin-v2-fe/dist/',
+            ? '/dist/' : '//www.awscert.cn/v1.0/dist/',
         filename: 'js/app.js'
     },
     resolve: {
